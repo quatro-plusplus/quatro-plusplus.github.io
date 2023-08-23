@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ERASOR2: Instance-Aware Robust 3D Mapping of the Static World in Dynamic Scenes">
-  <meta name="keywords" content="ERASOR, ERASOR2, 3DUIS">
+        content="Quatro++: Robust Global Registration Exploiting Ground Segmentation for Loop Closing in LiDAR SLAM">
+  <meta name="keywords" content="Quatro, Quatro++, Global registration">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ERASOR2: Instance-Aware Robust 3D Mapping of the Static World in Dynamic Scenes</title>
+  <title>Quatro++: Robust Global Registration Exploiting Ground Segmentation for Loop Closing in LiDAR SLAM</title>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -86,39 +86,32 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ERASOR2: Instance-Aware Robust 3D Mapping of the Static World in Dynamic Scenes</h1>
+          <h1 class="title is-1 publication-title">Quatro++: Robust Global Registration Exploiting Ground Segmentation for Loop Closing in LiDAR SLAM</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://limhyungtae.github.io/aboutme">Hyungtae Lim</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.ipb.uni-bonn.de/people/lucas-nunes/">Lucas Nunes</a><sup>2</sup>,</span>
+              <a href="https://github.com/kimbeomso">Beomsoo Kim</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.ipb.uni-bonn.de/people/benedikt-mersch/">Benedikt Mersch</a><sup>2</sup>,
+              <a href="https://github.com/kimdaebeom/">Daebeom Kim</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://xieyuanli-chen.com/">Xieyuanli Chen</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://jbehley.github.io/">Jens Behley</a><sup>2</sup>,
+              <a href="https://github.com/engcang/">Eungchang Mason Lee</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="https://urobot.kaist.ac.kr/url_teams/prof-hyunmyung/">Hyun Myung</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.ipb.uni-bonn.de/people/cyrill-stachniss/">Cyrill Stachniss</a><sup>2</sup>
-            </span>
+            </span>            
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Korea Advanced Institute of Science & Technology (KAIST),</span>
-            <span class="author-block"><sup>2</sup>University of Bonn</span>
+            <span class="author-block"><sup>1</sup>Korea Advanced Institute of Science & Technology (KAIST),</span>            
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf"
+                <a href="https://urobot.kaist.ac.kr/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -127,7 +120,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf"
+                <a href="https://urobot.kaist.ac.kr/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,7 +130,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://urobot.kaist.ac.kr/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -147,7 +140,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/url-kaist/ERASOR2"
+                <a href="https://urobot.kaist.ac.kr/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -172,30 +165,8 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">ERASOR2</span> rejects points from moving objects to make a static map for robotic navigation.
+        <span class="dnerf">Quatro++</span> will be explained!!!
       </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ERASOR2_Seq05.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ERASOR2_Seq19.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -209,49 +180,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            A map of the environment is an essential component for robotic navigation. 
-            In the majority of cases, a map of the static part of the world is the basis for localization, planning, and navigation. 
-            However, dynamic objects that are presented in the scenes during mapping leave undesirable traces in the map, which can impede mobile robots from achieving successful robotic navigation. 
-            To remove the artifacts caused by dynamic objects in the map, we propose a novel instance-aware map building method. 
-            Our approach rejects dynamic points at an instance-level while preserving most static points by exploiting instance segmentation estimates. 
-            Furthermore, we propose effective ways to consider the erroneous estimates of instance segmentation, enabling our proposed method to be robust even under imprecise instance segmentation. 
-            As demonstrated in our experimental evaluation, our approach shows substantial performance increases in terms of both, the preservation of static points and rejection of dynamic points.
+            Global registration is a fundamental task that estimates the relative pose between two viewpoints of 3D point clouds.
+            However, there are two issues that degrade the performance of global registration in LiDAR SLAM: one is the sparsity issue and the other is degeneracy. The sparsity issue is caused by the sparse characteristics of the 3D point cloud
+            measurements in a mechanically spinning LiDAR sensor. The degeneracy issue sometimes occurs because the outlier-rejection methods reject too many correspondences, leaving less than three inliers. These two issues have become
+            more severe as the pose discrepancy between the two viewpoints of 3D point clouds becomes greater. 
+            To tackle these problems, we propose a robust global registration framework, called Quatro++. 
+            Extending our previous work that solely focused on the global registration itself, we address the robust global registration in terms of the loop closing in LiDAR SLAM. 
+            To this end, ground segmentation is exploited to achieve robust global registration. 
+            Through the experiments, we demonstrate that our proposed method shows a higher success rate than the state-of-the-art global registration methods, overcoming the sparsity and degeneracy issues. 
+            In addition, we show that ground segmentation significantly helps to increase the success rate for ground vehicles. 
+            Finally, we apply our proposed method to the loop closing module in LiDAR SLAM and confirm that the quality of the loop constraints is improved, showing more precise mapping results. 
+            Therefore, the experimental evidence corroborated the suitability of our method as an initial alignment in the loop closing. 
+            Our code will be made available on publication.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
    
-  </div>
-  <!-- Seq. 05 -->
-  <h3 class="title is-4">Comparison in Seq. 05 of SemanticKITTI dataset</h3>
-  <div class="content is-centered has-text-centered">
-    <video id="replay-video"
-           controls
-           muted
-           preload
-           playsinline
-           width="100%">
-      <source src="./static/videos/ERASOR2_Seq05.mp4"
-              type="video/mp4">
-    </video>
-  </div>
-  <!--/ Seq. 05 -->
-  <!-- Seq. 19 -->
-    <h3 class="title is-4">Comparison in Seq. 19 of KITTI tracking dataset</h3>
-    <div class="content has-text-centered">
-      <video id="replay-video"
-             controls
-             muted
-             preload
-             playsinline
-             width="100%">
-        <source src="./static/videos/ERASOR2_Seq19.mp4"
-                type="video/mp4">
-      </video>
-    </div>
-  <!--/ Seq. 19 -->
-</section>
 
 
 <section class="section">
@@ -267,10 +213,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{lim2023erasor2,
+    <pre><code>@article{lim2023quatro-plusplus,
   author    = {Lim, Hyungtae and Nunes, Lucas and Mersch, Benedikt and Chen, Xieyuanli and Behley, Jens and Myung, Hyun and Stachniss, Cyrill},
-  title     = {ERASOR2: Instance-aware robust 3D mapping of the static world in dynamic scenes},
-  booktitle = {Robotics: Science and systems},
+  title     = {Quatro++: Robust Global Registration Exploiting Ground Segmentation for Loop Closing in LiDAR SLAM},
+  booktitle = {International Journal of Robotics Research},
   year      = {2023},
 }</code></pre>
   </div>
