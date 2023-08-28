@@ -13,6 +13,30 @@ If you find Quatro++ useful for your work please cite:
   year      = {2023},
 }
 ```
+```
+@article{lim2022quatro,
+    title={A Single Correspondence Is Enough: Robust Global Registration to Avoid Degeneracy in Urban Environments},
+    author={Lim, Hyungtae and Yeon, Suyong and Ryu, Suyong and Lee, Yonghan and Kim, Youngji and Yun, Jaeseong and Jung, Euigon and Lee, Donghwan and Myung, Hyun},
+    booktitle={Proc. IEEE Int. Conf. Robot. Autom.},
+    year={2022},
+    pages={8010--8017}
+    }
+```
+
+## TODO List
+- [ ] Quatro module parallelization (~09/02)
+  + Optionally build with oneTBB
+- [ ] Add how to use in fancy way
+	+ [ ] module branch (~09/02)
+	+ [ ] Quatro++ module branch (w/ Patchwork)
+- [ ] Add further works utilizing Quatro++
+	+ [ ] Quatro with other SLAM methods - FAST_LIO + Loop-closing (~09/02)
+  + [ ] Quatro++ with other SLAM methods - FAST_LIO + Loop-closing
+  + [ ] Quatro for localization - FAST_LIO + Localization (~09/03)
+  + [ ] Quatro++ for localization - FAST_LIO + Localization
+- [ ] Add featured results and videos from the papers
+	+ [ ] Quatro++ vs SOTA
+	+ [ ] Lego-LOAM series (~09/03)
 
 # Website License
 This template was forked from https://github.com/nerfies/nerfies.github.io
