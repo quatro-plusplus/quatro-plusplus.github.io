@@ -24,7 +24,7 @@ If you find Quatro++ useful for your work please cite:
 ```
 
 ## TODO List
-- [X] Quatro module parallelization (~09/02)
+- [X] Quatro module parallelization
   + Optionally build with oneTBB
 - [ ] Add featured results and videos from the papers
 	+ [ ] Quatro++ vs SOTA
@@ -35,7 +35,7 @@ If you find Quatro++ useful for your work please cite:
   + [ ] Quatro for localization - FAST_LIO + Localization (~09/03)
   + [ ] Quatro++ for localization - FAST_LIO + Localization
 - [ ] Add how to use in fancy way
-	+ [ ] module branch (~09/02)
+	+ [X] module branch
 	+ [ ] Quatro++ module branch (w/ Patchwork)
 
 # Website License

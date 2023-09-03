@@ -214,24 +214,18 @@
 
 <section class="section" id="HowToUse">
   <div class="container is-max-desktop content">
-    <h2 class="title">How to build and use</h2>
-    + Dependencies: 
-    + Get and build the code
-    ```shell
-    cd ~/your_workspace/src
-    git clone https://github.com/engcang/Quatro
-    cd ..
-    catkin build -DCMAKE_BUILD_TYPE=Release
-    ## For faster computation
-    catkin build -DCMAKE_BUILD_TYPE=Release -DQUATRO_TBB=ON
-    ```
+    <h2 class="title">How to use</h2>
+    <h4 class="title">Dependencies</h2>
+PCL >= 1.8, C++ >= 17, Boost >= 1.54, Eigen >= 3.2, OpenMP >= 4.5, Teaser++
+    <h4 class="title">Build</h2>
     <pre>
-      <code>
-      cd ~/your_workspace/src
-      git clone https://github.com/engcang/Quatro
-      cd ..
-      catkin build -DCMAKE_BUILD_TYPE=Release
-      catkin build -DCMAKE_BUILD_TYPE=Release -DQUATRO_TBB=ON
+      Test text here
+      <code class="cpp">cd ~/your_workspace/src
+git clone https://github.com/engcang/Quatro
+cd ..
+catkin build -DCMAKE_BUILD_TYPE=Release
+    ## For faster computation
+catkin build -DCMAKE_BUILD_TYPE=Release -DQUATRO_TBB=ON
       </code>
     </pre>
   </div>
