@@ -24,19 +24,19 @@ If you find Quatro++ useful for your work please cite:
 ```
 
 ## TODO List
-- [ ] Quatro module parallelization (~09/02)
+- [X] Quatro module parallelization (~09/02)
   + Optionally build with oneTBB
-- [ ] Add how to use in fancy way
-	+ [ ] module branch (~09/02)
-	+ [ ] Quatro++ module branch (w/ Patchwork)
+- [ ] Add featured results and videos from the papers
+	+ [ ] Quatro++ vs SOTA
+	+ [ ] Lego-LOAM series (~09/03)
 - [ ] Add further works utilizing Quatro++
 	+ [ ] Quatro with other SLAM methods - FAST_LIO + Loop-closing (~09/02)
   + [ ] Quatro++ with other SLAM methods - FAST_LIO + Loop-closing
   + [ ] Quatro for localization - FAST_LIO + Localization (~09/03)
   + [ ] Quatro++ for localization - FAST_LIO + Localization
-- [ ] Add featured results and videos from the papers
-	+ [ ] Quatro++ vs SOTA
-	+ [ ] Lego-LOAM series (~09/03)
+- [ ] Add how to use in fancy way
+	+ [ ] module branch (~09/02)
+	+ [ ] Quatro++ module branch (w/ Patchwork)
 
 # Website License
 This template was forked from https://github.com/nerfies/nerfies.github.io

@@ -212,6 +212,31 @@
 </section>
 
 
+<section class="section" id="HowToUse">
+  <div class="container is-max-desktop content">
+    <h2 class="title">How to build and use</h2>
+    + Dependencies: 
+    + Get and build the code
+    ```shell
+    cd ~/your_workspace/src
+    git clone https://github.com/engcang/Quatro
+    cd ..
+    catkin build -DCMAKE_BUILD_TYPE=Release
+    ## For faster computation
+    catkin build -DCMAKE_BUILD_TYPE=Release -DQUATRO_TBB=ON
+    ```
+    <pre>
+      <code>
+      cd ~/your_workspace/src
+      git clone https://github.com/engcang/Quatro
+      cd ..
+      catkin build -DCMAKE_BUILD_TYPE=Release
+      catkin build -DCMAKE_BUILD_TYPE=Release -DQUATRO_TBB=ON
+      </code>
+    </pre>
+  </div>
+</section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
