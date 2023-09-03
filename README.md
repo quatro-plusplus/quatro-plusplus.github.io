@@ -28,11 +28,11 @@ If you find Quatro++ useful for your work please cite:
   + Optionally build with oneTBB
 - [ ] Add featured results and videos from the papers
 	+ [ ] Quatro++ vs SOTA
-	+ [ ] Lego-LOAM series (~09/03)
 - [ ] Add further works utilizing Quatro++
-	+ [ ] Quatro with other SLAM methods - FAST_LIO + Loop-closing (~09/02)
+	+ [ ] Lego-LOAM series (~09/09)
+	+ [ ] Quatro with other SLAM methods - FAST_LIO + Loop-closing (~09/09)
   + [ ] Quatro++ with other SLAM methods - FAST_LIO + Loop-closing
-  + [ ] Quatro for localization - FAST_LIO + Localization (~09/03)
+  + [ ] Quatro for localization - FAST_LIO + Localization (~09/09)
   + [ ] Quatro++ for localization - FAST_LIO + Localization
 - [ ] Add how to use in fancy way
 	+ [X] module branch
