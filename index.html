@@ -214,38 +214,12 @@
 
 <section class="section" id="HowToUse">
   <div class="container is-max-desktop content">
-    <h2 class="title">How to use</h2>
-    <h4 class="title">Build</h2>
+    <h2 class="title">How to build</h2>
+    <h5 class="title">For detailed build steps and code examples, please visit <a href="https://github.com/engcang/Quatro">here</a></h2>
     <pre><code class="language-shell">cd ~/your_workspace/src
 git clone https://github.com/engcang/Quatro
 cd ..
 catkin build -DCMAKE_BUILD_TYPE=Release -DQUATRO_TBB=ON</code></pre>
-    <pre><code></code></pre>
-    <h4 class="title">Include as a module</h2>
-    <pre><code class="language-cmake">find_package(catkin REQUIRED COMPONENTS
-  quatro #Include here
-  )
-include_directories(
-  ${catkin_INCLUDE_DIRS} #Header files are included in catkin_INCLUDE_DIRS
-)
-add_library(some_library src/some_src.cpp)
-target_link_libraries(some_library ${catkin_LIBRARIES}) #Libraries are included in catkin_LIBRARIES</code></pre>
-    <h4 class="title">Usage in C++</h2>
-    <pre><code class="language-cpp">#include <quatro/quatro_module.h>
-using QuatroPointType = pcl::PointXYZI; //can be changed
-
-shared_ptr<quatro<QuatroPointType>> m_quatro_handler = nullptr;
-m_quatro_handler = std::make_shared<quatro<QuatroPointType>>(fpfh_normal_radius_, fpfh_radius_, noise_bound_, rot_gnc_factor_, rot_cost_diff_thr_, quatro_max_iter_, quatro_max_iter_); //refer https://github.com/engcang/FAST-LIO-SAM-QN/blob/master/fast_lio_sam_qn/config/config.yaml#L28
-
-//// use
-pcl::PointCloud<QuatroPointType> src_; //this should be not empty but the real data
-pcl::PointCloud<QuatroPointType> dst_; //this should be not empty but the real data
-bool if_valid_;
-Eigen::Matrix4d output_tf_ = m_quatro_handler->align(src_, dst_, if_valid_);
-if (if_valid_)
-{
-    // do something wiht output_tf_
-}</code></pre>
   </div>
 </section>
 
