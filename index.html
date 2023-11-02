@@ -67,15 +67,6 @@
           <a class="navbar-item" href="https://github.com/LimHyungTae/patchwork">
             Patchwork
           </a>
-          <a class="navbar-item" href="https://github.com/LimHyungTae/ERASOR">
-            ERASOR
-          </a>
-          <a class="navbar-item" href="https://github.com/url-kaist/ERASOR2">
-            ERASOR2
-          </a>
-          <a class="navbar-item" href="https://github.com/url-kaist/TRAVEL">
-            TRAVEL
-          </a>
         </div>
       </div>
     </div>
@@ -164,11 +155,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="50%">
-        <source src="./static/videos/ERASOR2_title_video.mp4"
+        <source src="./static/videos/quatro-plusplus_title_video.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Quatro++</span> will be explained!!!
+        <span class="dnerf">TL;DR Quatro++: Quatro w/ ground segmentation achieves robust registration performance!</span>
       </h2>
     </div>
   </div>
@@ -201,32 +192,71 @@
     </div>
     <!--/ Abstract. -->
    
-
-
 <section class="section">
   <div class="container is-max-desktop">
-
+    <!-- Introduction. -->
     <div class="columns is-centered">
-
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="intro">Why Quatro++?</h2>
+        <div class="content has-text-justified">
+          <p>
+            The ultimate goal of our approach is to <strong><em>achieve robust global registration even though the quality of feature matching is degraded</em></strong>.
+            Of course, just as in the current research direction, improving the performance of feature matching and descriptors naturally enhances the performance of registration (and in this case, RANSAC still works very well).
+            However, we want to propose a method that can robustly handle registration even in situations where the performance of feature extraction and matching is undesirably compromised.
+            To this end, we propose simple, yet powerful approach, which consist of a) ground segmentation and b) <a href="https://arxiv.org/abs/2203.06612v1">Quatro</a>.
+            <img src="./static/images/Fig1.png">
+          </p>
+          <p>
+            One may argue that Quatro++ is just the combination of ground segmentation and Quatro.
+            But what we aim for is to solve a difficult problem with ease using this simple combination of two approaches; and it actually works very well!
+          </p>
+        </div>
+        <h2 class="title is-3" id="limitation">Three Messages of Our Paper</h2>
+        <div class="content has-text-justified">
+          <p>
+            In addition, we'd like to say that we present three important guidelines to robotics community.
+            First, we quantitatively present hwo the ground segmentation actually help to improve the performance of registration as shown in Table 2 of our paper:
+            <img src="./static/images/effect_of_ground_segmentation.png">
+            While other researchers empirically use ground segmentation to
+            improve the performance of their own tasks, they seldom provide any in-depth
+            analyses of the impact of ground segmentation on global registration. Thus, we
+            conducted thorough analyses and particularly validated the potential of synergy
+            between our Quatro and ground segmentation.
+          </p>
+          <p>
+            Note that our proposed method is a <strong>learning-free</strong> approach; thus, our approach could be directly exploited to own environments.
+            Furthermore, we focus on the limited generalization capabilities of deep learning-based approaches.
+            For example, as shown in Table 3 in our paper, the SOTA deep learning-based
+            <img src="./static/images/kitti2mulran.png">
+          </p>
+          <p>
+            Note that our proposed method is a <strong>learning-free</strong> approach; thus, our approach could be directly exploited to own environments.
+            Furthermore, we focus on the limited generalization capabilities of deep learning-based approaches.
+            For example, as shown in Table 3 in our paper, the SOTA deep learning-based
+            <img src="./static/images/kitti2mulran.png">
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Introduction. -->
   </div>
 </section>
 
-
 <section class="section" id="UseCases">
   <div class="container is-max-desktop content">
-    <h2 class="title">Use cases</h2>
+    <h2 class="title">Applications (Use Cases)</h2>
     <h4 class="title">1. Loop-closing in SLAM</h4>
-    Lego-LOAM vs Lego-LOAM-Quatro<br>
-    Fast-LIO vs Fast-LIO-SAM-Quatro<br>
+    Lego-LOAM vs Lego-LOAM-Quatro (TBU)<br>
+    Fast-LIO vs Fast-LIO-SAM-Quatro (TBU)<br>
     <h4 class="title">2. Map-based matching for localization</h4>
-    Fast-LIO-Localizaiton-Quatro
+    Fast-LIO-Localizaiton-Quatro (TBU)
   </div>
 </section>
 
 
 <section class="section" id="HowToUse">
   <div class="container is-max-desktop content">
-    <h2 class="title">How to build</h2>
+    <h2 class="title">How to Build</h2>
     <h5 class="title">For detailed build steps and code examples, please visit <a href="https://github.com/engcang/Quatro">here</a></h2>
     <pre><code class="language-shell">cd ~/your_workspace/src
 git clone https://github.com/engcang/Quatro
