@@ -166,10 +166,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="50%">
-        <source src="./static/videos/quatro-plusplus_title_video.mp4"
-                type="video/mp4">
-      </video>
+      <div class="video-container">
+        <video id="teaser" autoplay muted loop playsinline class="full-video">
+          <source src="./static/videos/quatro-plusplus_title_video.mp4"
+          type="video/mp4">
+        </video>
+      </div>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">TL;DR Quatro++: Quatro w/ ground segmentation achieves robust registration performance <br> when two point clouds with large discrepancy of viewpoints are given!</span>
       </h2>
@@ -223,10 +225,12 @@
             It's true, but please kindly note that what we aim for is to solve a difficult problem with ease using this simple combination of two approaches; and it successfully shows significant performance.
             In particular, it has been remarkable that our Quatro++ consistently succeeds even when two point clouds with large discrepancies of viewpoints are given, as can be seen in the video below:
           </p>
-          <video id="howitworks" autoplay controls muted loop playsinline height="50%">
-          <source src="./static/videos/quatro-plusplus_explanation.mp4"
-                  type="video/mp4">
-          </video>
+          <div class="video-container">
+            <video id="howitworks" autoplay controls muted loop playsinline class="full-video">
+            <source src="./static/videos/quatro-plusplus_explanation.mp4"
+                    type="video/mp4">
+            </video>
+          </div>
         </div>
         <h2 class="title is-3" id="probdef">Problem Definition: Challenge of 3D Point Cloud Registration in Distant and Partially Overlapped Cases</h2>
         <div class="content has-text-justified">
@@ -278,10 +282,12 @@
             Consequently, our Quatro++ significantly makes the quality of mapping better, particularly in large-scale environments,
             presenting tightly aligned mapping results and fewer false loops.
           </p>
-          <video id="slam_demo" autoplay controls muted loop playsinline height="50%">
-          <source src="./static/videos/quatro-plusplus_slam_demo.mp4"
-                  type="video/mp4">
-          </video>
+          <div class="video-container">
+            <video id="slam_demo" autoplay controls muted loop playsinline class="full-video">
+              <source src="./static/videos/quatro-plusplus_slam_demo.mp4"
+              type="video/mp4">
+            </video>
+          </div>
           <img src="static/images/Fig20_DCC01_comparison.png">
           <p><em>(T-B): Point cloud mapping results and the corresponding loop constraints in DCC01 of the MulRan dataset. (a) The original LeGO-LOAM.
               (b) LeGO-LOAM with ScanContext as a loop detection. (c) LeGO-LOAM with both TEASER++ and ScanContext, named as TSC-LeGO-LOAM.
@@ -323,21 +329,40 @@
 
 <section class="section" id="UseCases">
   <div class="container is-max-desktop content">
-    <h1 class="title">Stay tuned! Below contents will be updated!</h1>
     <h2 class="title">Applications (Use Cases)</h2>
     <h4 class="title">1. Loop-closing in SLAM</h4>
-    Lego-LOAM vs Lego-LOAM-Quatro (TBU)<br>
-    Fast-LIO vs Fast-LIO-SAM-Quatro (TBU)<br>
+    In addition to the previously mentioned <a href="https://github.com/url-kaist/Quatro-LeGO-LOAM">Quatro-Lego-LOAM</a>, we implemented real-time SLAM methods and publicized them to benefit the robotics community: <a href="https://github.com/engcang/FAST-LIO-SAM-QN">FAST-LIO-SAM-QN</a>
+     and <a href="https://github.com/engcang/FAST-LIO-SAM-SC-QN">FAST-LIO-SAM-SC-QN</a>. These methods utilize FAST-LIO2 as odometry estimates and Quatro as real-time loop closing module. 
+     Quatro robustly estimates the relative pose between two point clouds with large pose discrepancy, where plane ICP methods fail. 
+     Quatro is optimized with TBB and the `optimizeMatching` function to achieve real-time performance, while maintaining the robustness and accuracy of the registration.
+    <br>
+    <br>
+    <div class="video-container">
+      <video id="fast_lio_sam_qn" autoplay controls muted loop playsinline class="reduced-video">
+      <source src="./static/videos/fast_lio_sam_qn.mp4"
+              type="video/mp4">
+      </video>
+    </div>
+    <br>
+    <br>
     <h4 class="title">2. Map-based matching for localization</h4>
-    Fast-LIO-Localizaiton-Quatro (TBU)
+    <a href="https://github.com/engcang/FAST-LIO-localization-qn">Fast-LIO-Localizaiton-QN</a>
+    <br>
+    <br>
+    <div class="video-container">
+      <video id="fast_lio_localization" autoplay controls muted loop playsinline class="reduced-video">
+      <source src="./static/videos/fast_lio_localization_qn.mp4"
+              type="video/mp4">
+      </video>
+    </div>
   </div>
 </section>
 
 
 <section class="section" id="HowToUse">
   <div class="container is-max-desktop content">
-    <h2 class="title">How to Build</h2>
-    <h5 class="title">For detailed build steps and code examples, please visit <a href="https://github.com/engcang/Quatro">here</a></h2>
+    <h2 class="title">How to use in your packages</h2>
+    <h5 class="title">For detailed build steps and code examples of Quatro as a module, please visit <a href="https://github.com/engcang/Quatro">here</a></h2>
     <pre><code class="language-shell">cd ~/your_workspace/src
 git clone https://github.com/engcang/Quatro
 cd ..
