@@ -334,7 +334,7 @@
     In addition to the previously mentioned <a href="https://github.com/url-kaist/Quatro-LeGO-LOAM">Quatro-Lego-LOAM</a>, we implemented real-time SLAM methods and publicized them to benefit the robotics community: <a href="https://github.com/engcang/FAST-LIO-SAM-QN">FAST-LIO-SAM-QN</a>
      and <a href="https://github.com/engcang/FAST-LIO-SAM-SC-QN">FAST-LIO-SAM-SC-QN</a>. These methods utilize FAST-LIO2 as odometry estimates and Quatro as real-time loop closing module. 
      Quatro robustly estimates the relative pose between two point clouds with large pose discrepancy, where plane ICP methods fail. 
-     Quatro is optimized with TBB and the `optimizeMatching` function to achieve real-time performance, while maintaining the robustness and accuracy of the registration.
+     Furthermore, Quatro is optimized with TBB and the `optimizeMatching` function to achieve real-time performance, while maintaining the robustness and accuracy of the registration.
     <br>
     <br>
     <div class="video-container">
@@ -346,7 +346,9 @@
     <br>
     <br>
     <h4 class="title">2. Map-based matching for localization</h4>
-    <a href="https://github.com/engcang/FAST-LIO-localization-qn">Fast-LIO-Localizaiton-QN</a>
+    As Quatro provides robust and accurate global registration, a real-time map-based localization is also implemented and publicized. 
+    <a href="https://github.com/engcang/FAST-LIO-localization-qn">Fast-LIO-Localizaiton-QN</a> accurately localizes the robots in the global coordinates by matching the current scan and the saved map.
+    This can be efficiently applied to autonomous robots that perform repetitive tasks in designated areas.
     <br>
     <br>
     <div class="video-container">
